@@ -1,0 +1,68 @@
+       /* 背景 */  
+body {
+    width: 100%;
+    height: 100%;
+    color: #4c331e;
+    line-height: 1.8;
+    background: url(https://001.pipixiaozhan.cn/images/2024/1/image-264.webp) top left,#fff;
+    animation: bgLoop 30s linear infinite;
+}
+@-webkit-keyframes bgLoop {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: -1366px 768px
+    }
+}
+
+@keyframes bgLoop {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: -1366px 768px
+    }
+}
+
+@media screen and (max-width: 900px) {
+    @-webkit-keyframes bgLoop {
+        100% {
+            background-position:-683px 384px
+        }
+    }
+
+    @keyframes bgLoop {
+        100% {
+            background-position: -683px 384px
+        }
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0)
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0)
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg)
+    }
+}
+       /* 背景完 */  
+

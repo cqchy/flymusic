@@ -1,0 +1,73 @@
+/* 定义新字体 */  
+@font-face {  
+    font-family: 'ZixiaoHun'; /* 你可以给字体一个你喜欢的名字 */  
+    src: url('woff/zixiaohun.woff') format('woff'); /* 确保 URL 路径是正确的 */  
+    font-weight: normal; /* 如果字体支持不同的粗细，你可以定义多个 @font-face 规则 */  
+    font-style: normal; /* 如果字体支持不同的样式（如斜体），你也可以定义多个 @font-face 规则 */  
+}  
+  
+/* 全站字体更改 */  
+body, h1, h2, h3, h4, h5, h6, p, div, span, /* ... 这里列出所有你希望应用新字体的标签 ... */  
+/* 或者简单地使用通配符，但请注意这可能会影响到一些你不希望更改的元素 */  
+* {  
+    font-family: 'ZixiaoHun', sans-serif; /* 首先使用新字体，如果新字体不可用则使用默认的无衬线字体 */  
+}  
+  
+/* （可选）如果你想要针对特定的元素或类应用不同的字体样式或大小，你可以在这里添加更多的 CSS 规则 */
+
+    /* 字体美化样式 */  
+    body {  
+        /* 使用你提供的字体（如果已定义在@font-face中） */  
+        font-family: 'ZixiaoHun', sans-serif;  
+        /* 字体大小 */  
+        font-size: 16px;  
+        /* 字体颜色 */  
+        color: #333;  
+        /* 行高 */  
+        line-height: 1.6;  
+        /* 字体平滑 */  
+        -webkit-font-smoothing: antialiased;  
+        -moz-osx-font-smoothing: grayscale;  
+    }  
+  
+    /* 标题字体美化 */  
+    h1, h2, h3, h4, h5, h6 {  
+        /* 标题颜色 */  
+        color: #222;  
+        /* 标题字体粗细 */  
+        font-weight: bold;  
+        /* 标题行高 */  
+        line-height: 1.2;  
+        /* 标题间距 */  
+        margin-bottom: 1em;  
+    }  
+  
+    /* 段落字体美化 */  
+    p {  
+        /* 段落首行缩进 */  
+        text-indent: 2em;  
+        /* 段落间距 */  
+        margin-bottom: 1em;  
+    }  
+  
+    /* 链接字体美化 */  
+    a {  
+        /* 链接颜色 */  
+        color: #007BFF;  
+        /* 链接下划线 */  
+        text-decoration: none;  
+        /* 链接鼠标悬停颜色 */  
+        transition: color 0.3s;  
+    }  
+  
+    a:hover {  
+        color: #0056b3;  
+    }  
+  
+    /* 如果定义了@font-face规则，可以放在这里 */  
+    /* @font-face {  
+        font-family: 'ZixiaoHun';  
+        src: url('woff/zixiaohun.woff') format('woff');  
+        font-weight: normal;  
+        font-style: normal;  
+    } */  

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlyMusic - 在线音乐平台</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/flymusic.min.css">
+	<link rel="stylesheet" href="css/flymusic.dark.css">
+	<link rel="stylesheet" href="css/flymusic.font.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+</head>
+    <style>
+        /* 定义新字体 */  
+@font-face {  
+    font-family: 'ZixiaoHun'; /* 你可以给字体一个你喜欢的名字 */  
+    src: url('woff/zixiaohun.woff') format('woff'); /* 确保 URL 路径是正确的 */  
+    font-weight: normal; /* 如果字体支持不同的粗细，你可以定义多个 @font-face 规则 */  
+    font-style: normal; /* 如果字体支持不同的样式（如斜体），你也可以定义多个 @font-face 规则 */  
+}  
+  
+/* 全站字体更改 */    
+body, h1, h2, h3, h4, h5, h6, p, div, span, /* ... 这里列出所有你希望应用新字体的标签 ... */  
+/* 或者简单地使用通配符，但请注意这可能会影响到一些你不希望更改的元素 */  
+* {  
+    font-family: 'ZixiaoHun', sans-serif; /* 首先使用新字体，如果新字体不可用则使用默认的无衬线字体 */  
+}  
+  
+/* （可选）如果你想要针对特定的元素或类应用不同的字体样式或大小，你可以在这里添加更多的 CSS 规则 */
+
+    /* 字体美化样式 */  
+    body {  
+        /* 使用你提供的字体（如果已定义在@font-face中） */  
+        font-family: 'ZixiaoHun', sans-serif;  
+        /* 字体大小 */  
+        font-size: 16px;  
+        /* 字体颜色 */  
+        color: #333;  
+        /* 行高 */  
+        line-height: 1.6;  
+        /* 字体平滑 */  
+        -webkit-font-smoothing: antialiased;  
+        -moz-osx-font-smoothing: grayscale;  
+    }  
+  
+    /* 标题字体美化 */  
+    h1, h2, h3, h4, h5, h6 {  
+        /* 标题颜色 */  
+        color: #222;  
+        /* 标题字体粗细 */  
+        font-weight: bold;  
+        /* 标题行高 */  
+        line-height: 1.2;  
+        /* 标题间距 */  
+        margin-bottom: 1em;  
+    }  
+  
+    /* 段落字体美化 */  
+    p {  
+        /* 段落首行缩进 */  
+        text-indent: 2em;  
+        /* 段落间距 */  
+        margin-bottom: 1em;  
+    }  
+  
+    /* 链接字体美化 */  
+    a {  
+        /* 链接颜色 */  
+        color: #007BFF;  
+        /* 链接下划线 */  
+        text-decoration: none;  
+        /* 链接鼠标悬停颜色 */  
+        transition: color 0.3s;  
+    }  
+  
+    a:hover {  
+        color: #0056b3;  
+    }  
+  
+    /* 如果定义了@font-face规则，可以放在这里 */  
+    /* @font-face {  
+        font-family: 'ZixiaoHun';  
+        src: url('woff/zixiaohun.woff') format('woff');  
+        font-weight: normal;  
+        font-style: normal;  
+    } */  
+     
+
+    </style>
+        <style>  
+            body {  
+                font-family: Arial, sans-serif;  
+                margin: 20px;  
+            }  
+            h1, h2 {  
+                text-align: center;  
+            }  
+            .details {  
+                margin-bottom: 20px;  
+            }  
+            .details dt, .details dd {  
+                display: inline-block;  
+                margin: 0;  
+                vertical-align: top;  
+                margin-right: 10px;  
+            }  
+            .details dt {  
+                font-weight: bold;  
+            }  
+        </style>  
+<body>
+    
+<div class="swiper-container">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> 
+       <div class="swiper-wrapper">
+           <div class="swiper-slide">
+             <div class="aplayer-wrap">
+             <h3 style="text-align: center">✨云音乐热歌榜✨</h3>
+                 <meting-js
+                     list-max-height="330px"
+                   server="netease"
+                   type="playlist"
+                   id="3778678">
+               </meting-js>  
+             
+             </div>
+          </div>
+           <div class="swiper-slide">
+             <div class="aplayer-wrap">
+             <h3 style="text-align: center">✨云音乐飙升榜✨</h3>
+                 <meting-js
+                     preload="none"
+                     list-max-height="330px"
+                   server="netease"
+                   type="playlist"
+                   id="19723756">
+               </meting-js>    
+             </div>
+           </div>
+           <div class="swiper-slide">
+             <div class="aplayer-wrap">
+             <h3 style="text-align: center">✨云音乐新歌榜✨</h3>
+                 <meting-js
+                     preload="none"
+                     list-max-height="330px"
+                   server="netease"
+                   type="playlist"
+                   id="3779629">
+               </meting-js>    
+             </div>
+           </div>
+           <div class="swiper-slide">
+             <div class="aplayer-wrap">
+             <h3 style="text-align: center">✨推荐云歌单✨</h3>
+                 <meting-js
+                     preload="none"
+                     list-max-height="330px"
+                   server="netease"
+                   type="playlist"
+                   id="642330848">
+               </meting-js>  
+             </div>
+          </div> 
+        <div class="swiper-slide">
+         <div class="aplayer-wrap">
+           <h1>FlyMusic 项目介绍</h1>
+           
+     
+
+     
+       <div class="details">  
+           <dl>  
+               <dt>开发者：</dt>  
+               <dd>cqchy</dd>  <br>
+               <dt>归属公司：</dt>  
+               <dd>重庆炫讯云信息技术有限公司</dd>  <br>
+               <dt>开发完成日期：</dt>  
+               <dd>2024年5月25日</dd>  
+           </dl>  
+       </div>  
+       <p>本程序现已经开源！您可以在GitHub上进行下载、分发、修改！</p> 
+       <p>本程序为开源产品，开源版不收取任何费用！</p>
+       <p>您可以购买专业版程序，包括我们的技术指导以及程序更新！</p>
+       <p>本开源程序无任何的后门、木马、病毒等危害程序！请放心使用、修改、分发!</p>
+       <p>有任何问题开源点击下方文档进行查看哦~</p>
+
+
+         </div>
+      </div> 
+</div>
+    
+<div class="landing-buttons">
+    <a class="landing-button" target="_blank" href="https://github.com/cqchy/flymusic/" style="text-decoration:none">
+       开源仓库
+    </a>
+    <a class="landing-button" target="_blank" href="https://docs.qq.com/doc/DS3ZBYXJUZ2lSYWha" style="text-decoration:none">
+       官方文档
+    </a>
+    <a class="landing-button" target="_blank" href="https://flymusic.hkncloud.cn/" style="text-decoration:none">
+       专业版
+    </a>
+
+</div>
+
+
+
+
+
+
+<footer class="footer">
+    <p>当前版本为开源版v1.0 | <a href="https://flymusic.hkncloud.cn/" style="text-decoration:none" >点我购买专业版程序</a></p>
+    <p>Copyright ©2024 FlyMusic by <a href="https://flymusic.hkncloud.cn/" style="text-decoration:none" >重庆炫讯云信息技术有限公司</a></p>
+</footer>
+
+<script src="js/swiper.min.js"></script>
+<script src="js/flymusic.min.js"></script>
+<script src="js/Meting.min.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true, 
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })       
+ </script>
+ <script type="text/javascript" size="150" alpha='0.8' zIndex="-2" src="js/ribbon.js"></script>
+</html>
